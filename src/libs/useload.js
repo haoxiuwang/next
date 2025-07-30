@@ -8,7 +8,7 @@ export default function useLoad() {
         const load = async ()=>{
 
 
-
+            ctx.init = true
             ctx.refresh()
         }
         load()

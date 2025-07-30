@@ -4,13 +4,13 @@ import Link from "../framework/Link.jsx"
 //框架代码
 import { useRoute } from '../framework/useRoute.js'
 import usePage from '../framework/usePage.js'
-import useLoad from '../framework/useLoad.js'
+import useLoad from './libs/useLoad.js'
 
 export default function App() {
   const path = useRoute()
   const Page = usePage(path)
   const ctx = useLoad()
- 
+  if(!ctx.init)return
   return (
     <div className='p-8'>  
       <nav className="flex place-items-center place-content-center space-x-4">
